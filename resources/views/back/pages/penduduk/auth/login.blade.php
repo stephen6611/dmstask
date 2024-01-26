@@ -49,7 +49,7 @@
 									{{ $message }}
 								</div>
 								@enderror
-								<div class="row pb-30">
+								<!-- <div class="row pb-30">
 									<div class="col-6">
 										<div class="custom-control custom-checkbox">
 											<input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -61,7 +61,7 @@
 											<a href="{{ route('penduduk.forgot-password') }}">Forgot Password</a>
 										</div>
 									</div>
-								</div>
+								</div> -->
 								<div class="row">
 									<div class="col-sm-12">
 										<div class="input-group mb-0">

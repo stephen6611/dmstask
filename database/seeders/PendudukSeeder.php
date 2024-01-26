@@ -14,9 +14,9 @@ class PendudukSeeder extends Seeder
     public function run(): void
     {
         Penduduk::create([
-            'name'=> 'Penduduk',
-            'username'=> 'penduduk',
-            'email'=> 'penduduk@email.com',
+            'name'=> 'Pengguna',
+            'username'=> 'pengguna',
+            'email'=> 'pengguna@email.com',
             'password'=> Hash::make('12345')
         ]);
         Penduduk::create([
