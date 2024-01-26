@@ -14,6 +14,7 @@ Route::prefix('penduduk')->name('penduduk.')->group(function () {
         Route::get("/password/reset/{token}",[PendudukController::class,"resetPassword"])->name("reset-password");
         Route::post('/reset-password-handler',[PendudukController::class,'resetPasswordHandler'])->name
         ('reset-password-hanlder');
+        
     });
 
     Route::middleware(['auth:penduduk','PreventBackHistory'])->group(function () {
@@ -21,10 +22,13 @@ Route::prefix('penduduk')->name('penduduk.')->group(function () {
         Route::post('/logout_handler',[PendudukController::class,'logoutHandler'])->name
         ('logout_handler');
         Route::get('/profile',[PendudukController::class,'profileView'])->name('profile');
+        Route::get('/home',[PendudukController::class,'showData'])->name('home');
         Route::post('/change-profile-picture',[PendudukController::class,'changeProfilePicture'])->name
         ('change-profile-picture');
         Route::delete('/delete-profile-picture',[PendudukController::class,'deleteProfilePicture'])->name
         ('delete-profile-picture');
-
+        Route::get('/penduduk/{id}/delete', [PendudukController::class, 'delete'])->name('penduduk.delete');
+        Route::get('/penduduk/edit/{pendudukId}', 'PendudukController@edit')->name('penduduk.profile');
+        Route::get('/penduduk/delete/{id}', 'PendudukController@delete')->name('penduduk.home');
     });
 });

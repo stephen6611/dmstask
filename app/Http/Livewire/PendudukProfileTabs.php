@@ -79,7 +79,7 @@ class PendudukProfileTabs extends Component
             
         ]);
 
-        $this->showToastr('success','Detail Informasi anda telah diperbarui.');
+        return redirect()->route('penduduk.home')->with('success', 'Data berhasil disimpan!');
     
     }
 

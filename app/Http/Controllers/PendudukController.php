@@ -197,6 +197,37 @@ class PendudukController extends Controller
         }
         return view('back.pages.penduduk.profile', compact('penduduk'));
     }
+    
+
+    public function delete($id)
+    {
+        $penduduk = Penduduk::find($id);
+
+        if (!$penduduk) {
+            return redirect()->route('penduduk.home')->with('error', 'Penduduk not found');
+        }
+
+        // Hapus data
+        $penduduk->delete();
+
+        return redirect()->route('penduduk.home')->with('success', 'Pengguna Berhasil dihapus');
+    }
+    
+    public function showData()
+    {  
+       
+        return view('back.pages.penduduk.home')->with([
+            'penduduks' => Penduduk::all()
+        ]);
+    }
+    public function edit($pendudukId)
+{
+    // Ambil data penduduk berdasarkan ID
+    $penduduk = Penduduk::find($pendudukId);
+
+    // Kirim data ke halaman edit
+    return view('back.pages.penduduk.profile', ['penduduk' => $penduduk]);
+}
     public function changeProfilePicture(Request $request){
         $penduduk = Penduduk::findOrFail(auth('penduduk')->id());
         $path ='/images/users/penduduks/';
@@ -217,6 +248,7 @@ class PendudukController extends Controller
             return response()->json(['status'=> 0,'msg'=> 'Kesalahan terjadi']);
         }
     }
+    
 
     public function deleteProfilePicture(Request $request)
     {
