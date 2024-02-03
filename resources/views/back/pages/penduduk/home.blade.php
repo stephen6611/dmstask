@@ -3,77 +3,113 @@
 @section('content')
 <div class="pd-ltr-20 xs-pd-20-10">
 				<div class="min-height-200px">
-					<div class="page-header">
-						<div class="row">
-							<div class="col-md-6 col-sm-12">
-								<div class="title">
-									<h4>DataTable</h4>
-								</div>
-								<nav aria-label="breadcrumb" role="navigation">
-									<ol class="breadcrumb">
-										<li class="breadcrumb-item">
-											<a href="index.html">Home</a>
-										</li>
-										<li class="breadcrumb-item active" aria-current="page">
-											DataTable
-										</li>
-									</ol>
-								</nav>
-							</div>
-							<div class="col-md-6 col-sm-12 text-right">
-								<div class="">
-									<button class="btn btn-primary" href="#" role="button" data-toggle="dropdown">
-										new data
-									</button>
-									
-								</div>
-							</div>
-						</div>
+					<div class="mb-3" style="margin-top: -20px">
+						<h1>Inbox Calon Debitur</h1>
 					</div>
-					<!-- Simple Datatable start -->
-					<div class="card-box mb-30">
-						<div class="pd-20">
-							<h4 class="text-blue h4">Data Table Simple</h4>
-							
-						</div>
-						<div class="pb-20">
-							<div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="data-table table stripe hover nowrap dataTable no-footer dtr-inline" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
-								<thead>
-									<tr role="row"><th class="table-plus datatable-nosort sorting_asc" rowspan="1" colspan="1" aria-label="Name">Name</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Age: activate to sort column ascending" style="">NIK</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Office: activate to sort column ascending" style="">Jenis Kelamin</th><th id="pendudukAlamat" class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Address: activate to sort column ascending" style="">Alamat</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Start Date: activate to sort column ascending" style="">Pekerjaan</th><th class="datatable-nosort sorting_disabled" rowspan="1" colspan="1" aria-label="Action" style="">Aksi</th></tr>
-								</thead>
-								<tbody>
-    @foreach ($penduduks as $row)
-        <tr role="row" class="odd">
-			<td>{{ $row->name }}</td>
-            <td>{{ $row->nik }}</td>
-            <td>{{ $row->gender }}</td>
-            <td>{{ $row->alamat }}</td>
-            <td>{{ $row->pekerjaan }}</td>
-            <td>
-                <div class="dropdown">
-                    <a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                        <i class="dw dw-more"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list" style="">
-                        <a class="dropdown-item" href="{{ route('penduduk.profile', ['pendudukId' => $row->id]) }}">
-                            <i class="dw dw-edit2"></i> Edit
-                        </a>
-                        <a class="dropdown-item" href="#">
-                            <i class="dw dw-delete-3" href="{{ route('penduduk.home', ['id' => $row->id]) }}"></i> Delete
-                        </a>
-                    </div>
-                </div>
-            </td>
-        </tr>
-    @endforeach
-</tbody>
-									
-									
-									<!--  -->
-									
-							</table></div></div></div></div>
-						</div>
-					</div>
-					<!-- Simple Datatable End -->
 					
+					<div class="clearfix pd-20 card-box mb-30 card-header" style="border-radius: 10px;">
+						<h3
+						  class="card-title"
+						  style="
+							font-weight: 600;
+							font-size: 22px;
+							vertical-align: middle;
+							text-align: justify;
+							color: #fff;
+							margin-top: -3px;
+						  "
+						>
+						Kriteria Pencarian Data Calon Debitur
+						</h3>
+						
+					  </div>
+					<div class="card" style="margin-top: -45px; margin-bottom: 200px; border-radius: 0px">
+						
+						<div class="form-group mx-4 my-4">
+							<form>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group mx-4">
+											<label>Nama Pemohon</label>
+											<input class="form-control" type="text" placeholder="Hanum Nirmala">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group mx-4">
+											<label>No. KTP</label>
+											<input class="form-control" type="email" placeholder="367106020880005">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group mx-4">
+											<label>Tanggal - Aplikasi Start</label>
+											<input class="form-control" type="date">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group mx-4">
+											<label>Tanggal Aplikasi - End Date</label>
+											<input class="form-control" type="date">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group mx-4">
+											<label>Cabang</label>
+											<select class="form-control">
+												<option>Aceh Besar</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6 d-flex align-items-end">
+										<div class="mb-3 d-flex justify-content-between" style="width: 100%;"><!--!-->
+										<button class="btn btn-outline-success ml-4" type="submit" style="margin-bottom: 6px; display: block; width: 45%">Cari</button>
+										<button class="btn btn-outline-danger mr-4" style="margin-bottom: 6px; display: block; width: 45%">Hapus</button></div></div>
+									
+										<div class="table-responsive" style="margin-right: 40px; margin-left: 40px; border-radius: 10px;">
+											<table class="table table-striped" style="border-radius: 10px; overflow: hidden;">
+												<thead>
+													<tr class="table-warning" >
+														<th scope="col" style="background-color: #E6E400;" >No. Aplikasi</th>
+														<th scope="col" style="background-color: #E6E400;" >Nama Pemohon</th>
+														<th scope="col" style="background-color: #E6E400;" > No. KTP</th>
+														<th scope="col" style="background-color: #E6E400;" >Tanggal Aplikasi</th>
+														<th scope="col" style="background-color: #E6E400;" >Cabang</th>
+														<th scope="col" style="background-color: #E6E400;" >Nama AO</th>
+														<th scope="col" style="background-color: #E6E400; text-align: center;" >#</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="table-light">
+														<td>Aceh-MM-20231130</td>
+														<td>Hanum Nirmala</td>
+														<td>367106020880004</td>
+														<td>15/12/2023</td>
+														<td>Erwin Lingga</td>
+														<td>Erwin Lingga (M1401)</td>
+														<td class="text-center"><button class="btn btn-outline-success center">Received</button></td>
+													</tr>
+													<tr style="background-color: #FFFFD4;">
+														<td colspan="2" style="text-align: left;">View 1-1 of 001 | Page 1 of 001</td>
+														<td colspan="3"></td>
+														<td colspan="2" style="text-align: right;">
+															<nav aria-label="Page navigation">
+																<ul class="pagination pagination-sm justify-content-end">
+																	<li class="page-item"><a class="page-link" href="#" style="font-weight: bold;"><small> << </small></a></li>
+																	<li class="page-item"><a class="page-link" href="#"> < </a></li>
+																	<li class="page-item active" style="background-color: #E6E400;"><a class="page-link" href="#" style="font-weight: bold;">1</a></li>
+																	<li class="page-item"><a class="page-link" href="#">2</a></li>
+																	<li class="page-item"><a class="page-link" href="#">3</a></li>
+																	<li class="page-item"><a class="page-link" href="#">...</a></li>
+																	<li class="page-item"><a class="page-link" href="#" style="font-weight: bold;"> > </a></li>
+																	<li class="page-item"><a class="page-link" href="#" > >> </a></li>
+																</ul>
+															</nav>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+								</div>
+							</form>
+						</div>
 @endsection

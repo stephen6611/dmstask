@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html class="d-flex flex-column min-vh-100">
 	<head>
 		<!-- Basic Page Info -->
 		<meta charset="utf-8" />
@@ -61,184 +61,32 @@
 		<!-- End Google Tag Manager -->
 			<link rel="stylesheet" href="/extra-assets/ijabo/ijabo.min.css">
 			<link rel="stylesheet" href="/extra-assets/ijaboCropTool/ijaboCropTool.min.css">
+		
 		@livewireStyles
 		@stack('stylesheets')
 	</head>
-	<body>
-		<!-- <div class="pre-loader">
-			<div class="pre-loader-box">
-				<div class="loader-logo">
-					<img src="/back/vendors/images/deskapp-logo.svg" alt="" />
-				</div>
-				<div class="loader-progress" id="progress_div">
-					<div class="bar" id="bar1"></div>
-				</div>
-				<div class="percent" id="percent1">0%</div>
-				<div class="loading-text">Loading...</div>
-			</div>
-		</div> -->
+	<body class="flex-grow-1">
+		
 
 		<div class="header">
-			<div class="header-left">
-				<div class="menu-icon bi bi-list"></div>
-				<div
-					class="search-toggle-icon bi bi-search"
-					data-toggle="header_search"
-				></div>
-				<div class="header-search">
-					<form>
-						<div class="form-group mb-0">
-							<i class="dw dw-search2 search-icon"></i>
-							<input
-								type="text"
-								class="form-control search-input"
-								placeholder="Cari..."
-							/>
-							<div class="dropdown">
-								<a
-									class="dropdown-toggle no-arrow"
-									href="#"
-									role="button"
-									data-toggle="dropdown"
-								>
-									<i class="ion-arrow-down-c"></i>
-								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<div class="form-group row">
-										<label class="col-sm-12 col-md-2 col-form-label"
-											>From</label
-										>
-										<div class="col-sm-12 col-md-10">
-											<input
-												class="form-control form-control-sm form-control-line"
-												type="text"
-											/>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-12 col-md-2 col-form-label">To</label>
-										<div class="col-sm-12 col-md-10">
-											<input
-												class="form-control form-control-sm form-control-line"
-												type="text"
-											/>
-										</div>
-									</div>
-									<div class="form-group row">
-										<label class="col-sm-12 col-md-2 col-form-label"
-											>Subject</label
-										>
-										<div class="col-sm-12 col-md-10">
-											<input
-												class="form-control form-control-sm form-control-line"
-												type="text"
-											/>
-										</div>
-									</div>
-									<div class="text-right">
-										<button class="btn btn-primary">Search</button>
-									</div>
-								</div>
-							</div>
-						</div>
-					</form>
+				<div class="header-left col-md-12 col-sm-12">
+					<div class="menu-icon fa fa-angle-left" style="margin-left: -32px;"></div>
+					<nav aria-label="breadcrumb" role="navigation" class="mt-3">
+						<ol class="breadcrumb">
+							<li class="">
+								<img class="mt-2" src="/images/users/Home Icon.svg" style="margin-right: 4px; margin-bottom: 9px;" alt=""><a href=""></a>
+							</li>
+							<li class="breadcrumb-item active" aria-current="page" style="margin-top: 8px;">
+								/ Inquiry Calon Debitur
+							</li>
+						</ol>
+					</nav>
+					
 				</div>
-			</div>
 			<div class="header-right">
-				<div class="dashboard-setting user-notification">
-					<div class="dropdown">
-						<a
-							class="dropdown-toggle no-arrow"
-							href="javascript:;"
-							data-toggle="right-sidebar"
-						>
-							<i class="dw dw-settings2"></i>
-						</a>
-					</div>
-				</div>
-				<div class="user-notification">
-					<div class="dropdown">
-						<a
-							class="dropdown-toggle no-arrow"
-							href="#"
-							role="button"
-							data-toggle="dropdown"
-						>
-							<i class="icon-copy dw dw-notification"></i>
-							<span class="badge notification-active"></span>
-						</a>
-						<div class="dropdown-menu dropdown-menu-right">
-							<div class="notification-list mx-h-350 customscroll">
-								<ul>
-									<li>
-										<a href="#">
-											<img src="/back/vendors/images/img.jpg" alt="" />
-											<h3>John Doe</h3>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed...
-											</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<img src="/back/vendors/images/photo1.jpg" alt="" />
-											<h3>Lea R. Frith</h3>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed...
-											</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<img src="/back/vendors/images/photo2.jpg" alt="" />
-											<h3>Erik L. Richards</h3>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed...
-											</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<img src="/back/vendors/images/photo3.jpg" alt="" />
-											<h3>John Doe</h3>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed...
-											</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<img src="/back/vendors/images/photo4.jpg" alt="" />
-											<h3>Renee I. Hansen</h3>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed...
-											</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<img src="/back/vendors/images/img.jpg" alt="" />
-											<h3>Vicki M. Coleman</h3>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed...
-											</p>
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				
-
-				@livewire('penduduk-header-profile-info')
+								
+			
+				{{-- @livewire('penduduk-header-profile-info') --}}
 
 				<!-- <div class="github-link">
 					<a href="https://github.com/dropways/deskapp" target="_blank"
@@ -434,41 +282,124 @@
 			</div>
 			<div class="menu-block customscroll">
 				<div class="sidebar-menu">
-					<ul id="accordion-menu">
+					<ul id="accordion-menu" style="margin-left: -20px">
 					
 					@if ( Route::is('penduduk.*') )
-						<li>
+						<!-- <li>
 							<a href="{{ route('penduduk.home') }}" class="dropdown-toggle no-arrow">
 								<span class="micon fa fa-home"></span
 								><span class="mtext">Home</span>
 							</a>
 						</li>
-						
-						<!-- <li>
-							<a href="invoice.html" class="dropdown-toggle no-arrow">
-								<span class="micon bi bi-receipt-cutoff"></span
-								><span class="mtext">Invoice</span>
-							</a>
-						</li> -->
 						<li>
 							<div class="dropdown-divider"></div>
-						</li>
-						<li>
-							<div class="sidebar-small-cap">Setting</div>
+						</li> -->
+						<li style="margin-left: 15px">
+							<div class="sidebar-small-cap">Main Menu</div>
 						</li>
 						
 						<li>
 							<a
-								href="{{ route('penduduk.profile') }}"
+								href="{{ route('penduduk.home') }}"
 								
 								class="dropdown-toggle no-arrow"
 							>
-								<span class="micon fa fa-user"></span>
+								<span class="micon" style="margin-left: 8px">
+									<img src="/images/users/icon-side.svg" alt="side">
+								</span>
 								<span class="mtext"
-									>Profile
+									>Inquiry Calon Debitur
 								</span>
 							</a>
 						</li>
+						<li>
+							<a
+								href="{{route('penduduk.dataentry')}}"
+								
+								class="dropdown-toggle no-arrow"
+							>
+								<span class="micon" style="margin-left: 8px">
+									<img src="/images/users/icon-side.svg" alt="side">
+								</span>
+								<span class="mtext"
+									>Data Entry
+								</span>
+							</a>
+						</li>
+						<li>
+							<a
+								href="#"
+								
+								class="dropdown-toggle no-arrow"
+							>
+								<span class="micon" style="margin-left: 8px">
+									<img src="/images/users/icon-side.svg" alt="side">
+								</span>
+								<span class="mtext"
+									>Akad
+								</span>
+							</a>
+						</li>
+						
+						<li>
+							<a
+								href="#"
+								class="dropdown-toggle no-arrow"
+							>
+								<span class="micon" style="margin-left: 8px">
+									<img src="/images/users/icon-side.svg" alt="side">
+								</span>
+								<span class="mtext"
+									>Inbox Pencairan
+								</span>
+							</a>
+						</li>
+						<li>
+							<a
+								href="#"
+								
+								class="dropdown-toggle no-arrow"
+							>
+								<span class="micon" style="margin-left: 8px">
+									<img src="/images/users/icon-side.svg" alt="side">
+								</span>
+								<span class="mtext"
+									>Inquiry Status Aplikasi
+								</span>
+							</a>
+						</li>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<br>
+						<li class="mt-8">
+							<div class="dropdown-divider"></div>
+						</li>
+						
+						<li class="text-center">
+							<a href="" class="text-center">
+								<small>Powered by DMS</small>
+							</a>
+							<h5>Digiloan System</h5>
+							<p class="text-danger mb-3">Version 1.1</p>
+						</li>
+
+						
+
 						@else
 						<li>
 							<a href="{{ route('penduduk.home') }}" class="dropdown-toggle no-arrow">
@@ -520,11 +451,10 @@
 						@yield('content')
 					</div>
 				</div>
-				<div class="footer-wrap pd-20 mb-20 card-box">
-					DMS-TASK - © 2024
-					<a href="https://github.com/stephen6611" target="_blank"
-						>Stephen Andreas</a
-					>
+				<div class="footer footer-wrap pd-20 mb-20 card-box fixed-bottom container-fluid">
+				Copyright - © 2024,
+					<a href="#" target=""
+						>PT. Digital Mitra Sarana</a>
 				</div>
 			</div>
 		</div>
@@ -550,4 +480,5 @@
 		@livewireScripts
 		@stack('scripts')
 	</body>
+	
 </html>

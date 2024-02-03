@@ -52,10 +52,10 @@
 										</li>
 										
 										<li>
-										<span>Jenis Kelamin:</span> <a id="pendudukProfileGender" >{{ $penduduk->gender}}</a>
+										<span>Jenis Kelamin:</span> <a id="pendudukProfileGender">{{ $penduduk->gender}}</a>
 										</li>
 										<li>
-										<span>Golongan Darah:</span> <a id="pendudukGoldarah" >{{ $penduduk->gol_darah}}</a>
+										<span>Golongan Darah:</span> <a id="pendudukGoldarah">{{ $penduduk->gol_darah}}</a>
 										</li>
 										<li>
 											<span>Alamat:</span>

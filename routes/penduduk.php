@@ -19,6 +19,7 @@ Route::prefix('penduduk')->name('penduduk.')->group(function () {
 
     Route::middleware(['auth:penduduk','PreventBackHistory'])->group(function () {
         Route::view('/home','back.pages.penduduk.home')->name('home');
+        Route::view('/dataentry','back.pages.penduduk.dataentry')->name('dataentry');
         Route::post('/logout_handler',[PendudukController::class,'logoutHandler'])->name
         ('logout_handler');
         Route::get('/profile',[PendudukController::class,'profileView'])->name('profile');
